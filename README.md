@@ -9,9 +9,11 @@ The web page will present you with 3 buttons to choose from with a high level la
 
 You can change them, but the redirect controller currently maps the following:
 
-"videogames" : https://www.metacritic.com/games
-"comicstrip" : https://dilbert.com
-"walmart" : https://www.walmart.com
+| Label      | Redirect URL      |
+| ------------- | ------------- |
+| videogames | https://www.metacritic.com/games |
+| comicstrip | https://dilbert.com |
+| Walmart | https://walmart.com |
 
 The redirect controller will return an http 307 with those URLs in the response's location header. This will trigger the browser to invoke the URL and send the flow directly to those endpoints instead. 
 
