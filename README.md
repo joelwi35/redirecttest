@@ -17,4 +17,4 @@ You can change them, but the redirect controller currently maps the following:
 
 The redirect controller will return an http 307 with those URLs in the response's location header. This will trigger the browser to invoke the URL and send the flow directly to those endpoints instead. 
 
-It will appear that those buttons are directly tied to those endpoints, but they are not. If you stop the redirect controller service, clicking those buttons will not fail to find any resource and will return a 404. Try it out!
+It will appear that those buttons are directly tied to those endpoints, but they are not. If you stop the redirect controller service, clicking those buttons will not find the target URL and will return a 404 instead. Try it out!
