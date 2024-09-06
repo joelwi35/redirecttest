@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirect Test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .redirectButton {
+            font-size: 36px; /* Adjust as needed */
+            padding: 10px 20px; /* Adjust as needed */
+            margin: 10px; /* Space between buttons */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-size:50px;">ICS Redirect Service Demo</h1>
+    <h2>Click any of the following buttons to send a different keyword query string arg to the redirect service.</h2>    
+    
+    <button class="redirectButton">videogames</button>
+    <button class="redirectButton">comicstrip</button>
+    <button class="redirectButton">walmart</button>
+
+    <script>
+        $(document).ready(function() {
+            $('.redirectButton').click(function() {
+                const customField3 = $(this).text();
+                window.location.href = `http://localhost:3000/redirect?customField3=${encodeURIComponent(customField3)}`;
+            });
+        });
+    </script>
+</body>
+</html>
